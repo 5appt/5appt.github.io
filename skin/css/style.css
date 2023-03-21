@@ -534,7 +534,7 @@ a.mdetails {
 }
 /*公司简介*/
 .jc_about {
-	background-color: #FECE16;
+	background-color: #16bdfe;
 }
 .about_index {
 	padding: 20px 20px 40px 20px
@@ -685,7 +685,7 @@ a.mdetails {
 	color: #656464;
 }
 .left_nav_ul > li > a:hover, .left_nav_ul li a.left_active {
-	color: #fccc16;
+	color: #16bdfe;
 }
 /*小类*/
 ul.left_snav_ul {
@@ -880,7 +880,7 @@ ul.left_snav_ul > li > a:hover {
 	margin: 0px;
 	line-height: 24px;
 	font-size: 16px;
-	color: #fccc16;
+	color: #16bdfe;
 	padding-bottom: 5px;
 	border-bottom: 1px dotted #cccccc;
 }
@@ -924,7 +924,7 @@ ul.left_snav_ul > li > a:hover {
 	margin: 10px 10px 20px 0px;
 }
 .page-btn {
-	background-color: #fccc16;
+	background-color: #16bdfe;
 	border-radius: 0px;
 	border: none;
 }
@@ -1389,7 +1389,7 @@ li.small_li2_sitemap {
 	font-weight: 600;
 }
 .navbar-default .navbar-nav > li > a:hover,  .navbar-default .navbar-nav > li > a:focus,  .navbar-default .navbar-nav > .active > a,  .navbar-default .navbar-nav > .active > a:hover,  .navbar-default .navbar-nav > .open > a,  .navbar-default .navbar-nav > .open > a:hover,  .navbar-default .navbar-nav > .open > a:focus {
-	background-color: #fccc16;
+	background-color: #16bdfe;
 	color: #fff;
 }
 .small-nav {
@@ -1407,7 +1407,7 @@ li.small_li2_sitemap {
 	margin: 5px 0px 0px 0px;
 }
 .nav_small {
-	background: #fccc16;
+	background: #16bdfe;
 	padding: 8px 0px 8px 0px;
 	border-radius: 0px;
 	border: none;
@@ -1416,7 +1416,7 @@ li.small_li2_sitemap {
 	top: 0;
 	left: 100%;
 	position: absolute;
-	background: #fccc16;
+	background: #16bdfe;
 	padding: 8px 0px 8px 0px;
 	border-radius: 0px;
 	border: none;

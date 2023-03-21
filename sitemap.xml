@@ -4,25 +4,25 @@
 <url>
     <loc>http://youstone.zaojiaoguan.com</loc>
     <priority>1.00</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>always</changefreq>
 </url>
 <url>
     <loc>http://youstone.zaojiaoguan.com/about/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
     <loc>http://youstone.zaojiaoguan.com/products/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
     <loc>http://youstone.zaojiaoguan.com/news/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
@@ -58,13 +58,13 @@
 <url>
     <loc>http://youstone.zaojiaoguan.com/service/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
     <loc>http://youstone.zaojiaoguan.com/case/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
@@ -94,25 +94,13 @@
 <url>
     <loc>http://youstone.zaojiaoguan.com/contact/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
     <loc>http://youstone.zaojiaoguan.com/lm1/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
-    <changefreq>daily</changefreq>
-</url>
-<url>
-    <loc>http://youstone.zaojiaoguan.com/lm1/26.html</loc>
-    <priority>0.60</priority>
-    <lastmod>2023-03-08</lastmod>
-    <changefreq>daily</changefreq>
-</url>
-<url>
-    <loc>http://youstone.zaojiaoguan.com/lm1/28.html</loc>
-    <priority>0.60</priority>
-    <lastmod>2023-03-08</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>
@@ -124,31 +112,7 @@
 <url>
     <loc>http://youstone.zaojiaoguan.com/lm2/</loc>
     <priority>0.80</priority>
-    <lastmod>2023-03-19</lastmod>
-    <changefreq>daily</changefreq>
-</url>
-<url>
-    <loc>http://youstone.zaojiaoguan.com/lm2/23.html</loc>
-    <priority>0.60</priority>
-    <lastmod>2023-03-08</lastmod>
-    <changefreq>daily</changefreq>
-</url>
-<url>
-    <loc>http://youstone.zaojiaoguan.com/lm2/24.html</loc>
-    <priority>0.60</priority>
-    <lastmod>2023-03-08</lastmod>
-    <changefreq>daily</changefreq>
-</url>
-<url>
-    <loc>http://youstone.zaojiaoguan.com/lm2/25.html</loc>
-    <priority>0.60</priority>
-    <lastmod>2023-03-08</lastmod>
-    <changefreq>daily</changefreq>
-</url>
-<url>
-    <loc>http://youstone.zaojiaoguan.com/lm2/27.html</loc>
-    <priority>0.60</priority>
-    <lastmod>2023-03-08</lastmod>
+    <lastmod>2023-03-21</lastmod>
     <changefreq>daily</changefreq>
 </url>
 <url>

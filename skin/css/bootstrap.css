@@ -1796,6 +1796,9 @@ pre code {
 	width: 33.33333333%;
 }
 .col-md-3 {
+	width: 50%;
+}
+.col-md-66 {
 	width: 25%;
 }
 .col-md-2 {
