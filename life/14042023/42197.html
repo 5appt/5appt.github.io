@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>神还原物体复杂、高频细节，4K-NeRF 高保真视图合成来了_咖位生活网-分享生活经验知识</title>
+<meta name="keywords" content="神,还原,物体,复杂,、,高频,细节,4K-NeRF,大家," />
+<meta name="description" content="大家好，今天小编给大家整理了下面相关知识点，如果碰巧解决您的问题，别忘了关注本站哦，现在一起来看看吧 机器之心报道 机器之心编辑部 与现代 NeRF 方法的定量和定性比较表明" />
+<link rel="stylesheet" type="text/css" href="/style/css/style.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/style/css/font-awesome.min.css" media="screen"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="/style/css/font-awesome-ie7.min.css" media="screen"/>
+<![endif]-->
+<script src="/style/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="/style/js/zblogphp.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/style/js/html5-css3.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<header class="site-header" role="banner">
+  <div class="header">
+    <div class="top-box">
+      <div class="logo"> <a href="/" title="咖位生活网-分享生活经验知识"><img src="/style/images/logo.png" alt="咖位生活网-分享生活经验知识"/></a> </div>
+      <nav class="nav" role="navigation">
+        <div class="menu">
+          <ul>
+            <li id="nvabar-item-index"><a href="/"><i class="icon-home"></i> 首页</a></li>
+            <li id="navbar-category-1"><a href="/baike/"><i class="icon-tasks"></i> 百科知识</a></li>
+            <li id="navbar-category-1"><a href="/meishi/"><i class="icon-desktop"></i> 美食常识</a></li>
+            <li id="navbar-category-1"><a href="/life/"><i class="icon-desktop"></i> 生活常识</a></li>
+            <li id="navbar-page-2"><a href="/shuma/"><i class="icon-desktop"></i> 数码百科</a></li>
+            <li id="navbar-category-1"><a href="/huahui/"><i class="icon-desktop"></i> 花卉百科</a></li>
+            <li id="navbar-category-1"><a href="/qiche/"><i class="icon-desktop"></i> 汽车知识</a></li>
+            <li id="navbar-category-1"><a href="/jiaoyu/"><i class="icon-desktop"></i> 教育常识</a></li>
+            <li id="navbar-page-2"><a href="/"><i class="icon-share"></i> 男人世界</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="clear"></div>
+</header>
+<div class="container">
+  <div class="breadcrumb"> <i class="icon-home"></i> <a href='https://baike.husir.cn/'>主页</a> > <a href='/life/'>生活常识</a> >  </div>
+  <main class="main" role="main">
+    <div class="clear"></div>
+    <article class="post cate1  auth1">
+      
+      <h1>神还原物体复杂、高频细节，4K-NeRF 高保真视图合成来了</h1>
+      <div class="postmeta article-meta"> <span><i class="icon-calendar"></i> 日期：2023-04-14 </span> <span><i class="icon-book"></i> 栏目：<a href="" title="生活常识" target="_blank">生活常识</a></span> <span><i class="icon-fire"></i> 浏览：<script src="/plus/count.php?view=yes&aid=42197&mid=1" type='text/javascript' language="javascript"></script>次 </span> </div>
+      <div class="entry">
+        <p>大家好，今天小编给大家整理了下面相关知识点，如果碰巧解决您的问题，别忘了关注本站哦，现在一起来看看吧</p><p style="text-align: center"><img src="/pic/img1114.jpg"/></p>
+			<p>机器之心报道</p><p><strong>机器之心编辑部</strong></p><p>与现代 NeRF 方法的定量和定性比较表明，本文方法可以显着提高渲染质量以保留高频细节，在 4K 超高分辨率场景下实现最先进的视觉质量。</p><p>超高分辨率作为记录和显示高质量图像、视频的一种标准受到众多研究者的欢迎，与较低分辨率（1K 高清格式）相比，高分辨率捕获的场景通常细节十分清晰，像素的信息被一个个小 patch 放大。但是，想要将这种技术应用于图像处理和计算机视觉还面临很多挑战。</p><p>本文中，来自阿里巴巴的研究者专注于新的视图合成任务，提出了一个名为 4K-NeRF 的框架，其基于 NeRF 的体积渲染方法可以实现在 4K 超高分辨率下高保真视图合成。</p><p>论文地址：https://arxiv.org/abs/2212.04701</p><p>项目主页：https://github.com/frozoul/4K-NeRF</p><p>话不多说，我们先来看看效果（以下视频均进行了降采样处理，原版 4K 视频请参考原项目）：</p><p>4K-NeRF Demo1</p><p>4K-NeRF Demo2</p><p><strong>方法</strong></p><p>接下来我们来看看该研究是如何实现的。</p><p>4K-NeRF pipeline（如下图）：使用基于 patch 的射线采样技术，联合训练 VC-Encoder（View-Consistent）（基于 DEVO）在一个较低分辨率的空间中编码三维几何信息，之后经过一个 VC-Decoder 实现针对高频细高质量的渲染与视图一致性的增强。</p><p>该研究基于 DVGO [ 32 ] 中定义的公式实例化编码器，学习到的基于体素网格的表示来显式地编码几何结构：</p><p>对于每个采样点，密度估计的三线性插值配备了一个 softplus 激活函数用于生成该点的体密度值：</p><p>颜色则是用一个小型的 MLP 估计算：</p><p>这样可以通过累积沿着设线 r 的采样点的特征来得到每个射线（或像素）的特征值：</p><p>为了更好地利用嵌入在 VC-Encoder 中的几何属性，该研究还通过估计每条射线 r 沿采样射线轴的深度生成了一个深度图。估计的深度图为上面 Encoder 生成的场景三维结构提供了强有力的指导：</p><p>之后经过的网络是通过叠加几个卷积块（既不使用非参数归一化，也不使用降采样操作）和交错的升采样操作来建立的。特别是，该研究不是简单地将特征 F 和深度图 M 连接起来，而是加入了深度图中的深度信号，并通过学习变换将其注入每个块来调制块激活。</p><p>不同于传统的 NeRF 方法中的像素级机制，该研究的方法旨在捕获射线（像素）之间的空间信息。因此，这里不适合采用 NeRF 中随机射线采样的策略。因此该研究提出了一种基于 patch 的射线采样训练策略，以方便捕获射线特征之间的空间依赖性。训练中，首先将训练视图的图像分割成大小为 N_p × N_p 的 patch p，以确保像素上的采样概率是均匀的。当图像空间维数不能被 patch 大小精确分割时，需要截断 patch 直到边缘，得到一组训练 patch。然后从集合中随机抽取一个 ( 或多个 ) patch，通过 patch 中像素的射线形成每次迭代的 mini-batch。</p><p>为了解决对精细细节产生模糊或过度平滑视觉效果的问题，该研究添加了对抗性损失和感知损失来规范精细细节合成。感知损失通过预先训练的 19 层 VGG 网络来估计特征空间中预测的 patch 和真值 p 之间的相似性：</p><p>该研究使用损失而不是 MSE 来监督高频细节的重建</p><p>此外，该研究还添加了一个辅助 MSE 损失，最后总的 loss 函数形式如下：</p><p><strong>实验效果</strong></p><p><strong>定性分析</strong></p><p>实验对 4K-NeRF 与其他模型进行了比较，可以看到基于普通 NeRF 的方法有着不同程度的细节丢失、模糊现象。相比之下，4K-NeRF 在这些复杂和高频细节上呈现了高质量的逼真渲染，即使是在训练视野有限的场景上。</p><p><strong>定量分析</strong></p><p>该研究与目前几个方法在 4k 数据的基准下去做对比，包括 Plenoxels、DVGO、JaxNeRF、MipNeRF-360 和 NeRF-SR。实验不但以图像恢复的评价指标作为对比，还提供了推理时间和缓存内存，以供全面评估参考。结果如下：</p><p>虽然与一些方法的结果在一些指标上相差不大，但是得益于他们基于体素的方法在推理效率和内存成本上都取得了惊人的性能，允许在 300 ms 内渲染一个 4K 图像。</p><p><strong>总结及未来展望</strong></p><p>该研究探讨了 NeRF 在精细细节建模方面的能力，提出了一个新颖的框架来增强其在以极高分辨率的场景中恢复视图一致的细微细节的表现力。此外，该研究还引入了一对保持几何一致性的编解码器模块，在较低的空间中有效地建模几何性质，并利用几何感知特征之间的局部相关性实现全尺度空间中的视图一致性的增强，并且基于 patch 的抽样训练框架也允许该方法集成来自面向感知的正则化的监督。该研究希望将框架合并到动态场景建模中的效果，以及神经渲染任务作为未来的方向。</p><p> THE END </p><p>投稿或寻求报道：content@jiqizhixin.com</p>		
+		<p>这篇文章已经分享到这里了，希望对大家有所帮助。如果信息有误，请联系小编进行更正。</p>
+      </div>
+      
+      <div class="post-nav">
+        <div class="nav-left">上一篇：<a href='/life/14042023/42196.html'>AI 加持，编辑文本剪视频：Adobe 推倒了视频创作的门槛</a> </div>
+        <div class="nav-right">下一篇：<a href='/life/14042023/42198.html'>近期 5 款智能手环对比推荐</a> </div>
+      </div>
+      <div class="post-copyright">
+        <div class="xfgd772-fd39-245c-8079 zws">
+		<style>.button{background-color:#4CAF50;border:none;color:white;padding:5px 18px;text-align:center;text-decoration:none;display:inline-block;font-size:16px;margin:4px 2px;cursor:pointer}.button2{background-color:#008CBA}.button3{background-color:#f44336}</style><div style="font-family:verdana;padding:8px;border-radius:10px;border:5px solid #cdcecd"><p style="font-weight: bold;color: red">真正男人的世界↓警告：未满18禁入</p><button class="xfgfd39-245c-8079-dedd button"><a href="/"target="_blank"><font color="#FFFFFF">线路一</font></a></button><button class="xfg245c-8079-dedd-ca08 button button2"><a href="/"target="_blank"><font color="#FFFFFF">线路二</font></a></button><button class="xfg8079-dedd-ca08-6b92 button button3"><a href="/"target="_blank"><font color="#FFFFFF">线路三</font></a></button></div>	</div></div>
+      <section class="related">
+        <h3>相关推荐</h3>
+        <ul>
+         <li><i>2023-04-16</i><span class="top">1</span><a href="/life/16042023/55322.html" target="_blank" title="冯仑：2023年是买房子的好时机吗">冯仑：2023年是买房子的好时机吗</a></li>
+<li><i>2023-04-16</i><span class="top">2</span><a href="/life/16042023/55321.html" target="_blank" title="房价暴涨“万恶之源”（棚改货币化再度">房价暴涨“万恶之源”（棚改货币化再度</a></li>
+<li><i>2023-04-16</i><span class="top">3</span><a href="/life/16042023/55320.html" target="_blank" title="银行的房贷还不上怎么办才好（从这里选">银行的房贷还不上怎么办才好（从这里选</a></li>
+<li><i>2023-04-16</i><span class="top">4</span><a href="/life/16042023/55319.html" target="_blank" title="花呗借10000元利息多少（不同还款方式计">花呗借10000元利息多少（不同还款方式计</a></li>
+<li><i>2023-04-16</i><span class="top">5</span><a href="/life/16042023/55318.html" target="_blank" title="“反向讨薪”（多家银行追索扣回员工绩">“反向讨薪”（多家银行追索扣回员工绩</a></li>
+<li><i>2023-04-16</i><span class="top">6</span><a href="/life/16042023/55317.html" target="_blank" title="医院回应护士上班戴美甲给患者扎针（已">医院回应护士上班戴美甲给患者扎针（已</a></li>
+<li><i>2023-04-16</i><span class="top">7</span><a href="/life/16042023/55316.html" target="_blank" title="拒绝相亲被打女子称对方道德绑架（太恐">拒绝相亲被打女子称对方道德绑架（太恐</a></li>
+<li><i>2023-04-16</i><span class="top">8</span><a href="/life/16042023/55309.html" target="_blank" title="房价上涨城市数量增多（这个地方涨幅排">房价上涨城市数量增多（这个地方涨幅排</a></li>
+<li><i>2023-04-16</i><span class="top">9</span><a href="/life/16042023/55306.html" target="_blank" title="国际金价收创新高（4只黄金主题QDII基金">国际金价收创新高（4只黄金主题QDII基金</a></li>
+<li><i>2023-04-16</i><span class="top">10</span><a href="/life/16042023/55313.html" target="_blank" title="狗生肖配羊生肖合吗（和生肖羊的人结婚">狗生肖配羊生肖合吗（和生肖羊的人结婚</a></li>
+
+        </ul>
+      </section>
+      
+
+    </article>
+  </main>
+  <aside class="sidebar">
+    <section class="widget" id="divSearchPanel">
+      <h3><i class="icon-th-list"></i> 搜索</h3>
+      <div>
+        <form  name="formsearch" action="/plus/search.php">
+          <input type="text" name="q" size="11" />
+          <input type="submit" value="搜索" />
+        </form>
+      </div>
+    </section>
+    <section class="widget" id="scroll">
+      <h3><i class="icon-th-list"></i> 热门文章</h3>
+      <ul class="hot-post">
+        <li>
+          <div class="thumb"><a href="/baike/09042023/3426.html" title="主要内容概括方法技巧有哪些"><img src="/pic/img4742-lp.jpg" alt="主要内容概括方法技巧有哪些"/></a></div>
+          <div class="hot-title"><a href="/baike/09042023/3426.html" title="主要内容概括方法技巧有哪些">主要内容概括方法技巧有哪些</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-09</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/life/15042023/48774.html" title="急用钱哪个平台好借一点（精选几款申请门槛并"><img src="/pic/img3180-lp.jpg" alt="急用钱哪个平台好借一点（精选几款申请门槛并"/></a></div>
+          <div class="hot-title"><a href="/life/15042023/48774.html" title="急用钱哪个平台好借一点（精选几款申请门槛并">急用钱哪个平台好借一点（精选几款申请门槛并</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-15</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/baike/12042023/24951.html" title="投档线志愿号是什么意思"><img src="/pic/img5076-lp.jpg" alt="投档线志愿号是什么意思"/></a></div>
+          <div class="hot-title"><a href="/baike/12042023/24951.html" title="投档线志愿号是什么意思">投档线志愿号是什么意思</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-12</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/shuma/12042023/24648.html" title="小米Mix 4什么时候上市？详细解析"><img src="/pic/img2499-lp.jpg" alt="小米Mix 4什么时候上市？详细解析"/></a></div>
+          <div class="hot-title"><a href="/shuma/12042023/24648.html" title="小米Mix 4什么时候上市？详细解析">小米Mix 4什么时候上市？详细解析</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-12</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/baike/16042023/49389.html" title="东北烤盘烤肉腌制方法视频"><img src="/pic/img5612-lp.jpg" alt="东北烤盘烤肉腌制方法视频"/></a></div>
+          <div class="hot-title"><a href="/baike/16042023/49389.html" title="东北烤盘烤肉腌制方法视频">东北烤盘烤肉腌制方法视频</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+
+      </ul>
+    </section>
+    <section class="widget">
+      <h3><i class="icon-th-list"></i> 热评文章</h3>
+      <ul class="hot-post">
+        <li>
+          <div class="thumb"><a href="/life/16042023/55322.html" title="冯仑：2023年是买房子的好时机吗"><img src="/pic/img5845-lp.jpg" alt="冯仑：2023年是买房子的好时机吗"/></a></div>
+          <div class="hot-title"><a href="/life/16042023/55322.html" title="冯仑：2023年是买房子的好时机吗">冯仑：2023年是买房子的好时机吗</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/life/16042023/55321.html" title="房价暴涨“万恶之源”（棚改货币化再度 卷土重"><img src="/pic/img1620-lp.jpg" alt="房价暴涨“万恶之源”（棚改货币化再度 卷土重"/></a></div>
+          <div class="hot-title"><a href="/life/16042023/55321.html" title="房价暴涨“万恶之源”（棚改货币化再度 卷土重">房价暴涨“万恶之源”（棚改货币化再度 卷土重</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/life/16042023/55320.html" title="银行的房贷还不上怎么办才好（从这里选择合适"><img src="/pic/img155-lp.jpg" alt="银行的房贷还不上怎么办才好（从这里选择合适"/></a></div>
+          <div class="hot-title"><a href="/life/16042023/55320.html" title="银行的房贷还不上怎么办才好（从这里选择合适">银行的房贷还不上怎么办才好（从这里选择合适</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/life/16042023/55319.html" title="花呗借10000元利息多少（不同还款方式计算公式如"><img src="/pic/img3371-lp.jpg" alt="花呗借10000元利息多少（不同还款方式计算公式如"/></a></div>
+          <div class="hot-title"><a href="/life/16042023/55319.html" title="花呗借10000元利息多少（不同还款方式计算公式如">花呗借10000元利息多少（不同还款方式计算公式如</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/life/16042023/55318.html" title="“反向讨薪”（多家银行追索扣回员工绩效薪酬"><img src="/pic/img1678-lp.jpg" alt="“反向讨薪”（多家银行追索扣回员工绩效薪酬"/></a></div>
+          <div class="hot-title"><a href="/life/16042023/55318.html" title="“反向讨薪”（多家银行追索扣回员工绩效薪酬">“反向讨薪”（多家银行追索扣回员工绩效薪酬</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+<li>
+          <div class="thumb"><a href="/life/16042023/55317.html" title="医院回应护士上班戴美甲给患者扎针（已督促卸"><img src="/pic/img284-lp.jpg" alt="医院回应护士上班戴美甲给患者扎针（已督促卸"/></a></div>
+          <div class="hot-title"><a href="/life/16042023/55317.html" title="医院回应护士上班戴美甲给患者扎针（已督促卸">医院回应护士上班戴美甲给患者扎针（已督促卸</a></div>
+          <div class="hot-time"><i class="icon-time"></i> 2023-04-16</div>
+        </li>
+
+      </ul>
+    </section>
+    
+  </aside>
+</div>
+<footer class="footer">
+  <div class="foot">
+    <p>Copyright © 2022 All Rights Reserved 京ICP2022126-1号  <a href="/sitemap.xml" target="_blank">网站地图</a></p>
+    <p> </p>
+  </div>
+</footer>
+<div class="backtop"> <a title="返回顶部"><i class="icon-chevron-up"></i></a> </div>
+<script type="text/javascript" src="/style/js/leonhere.js"></script> 
+<script type="text/javascript" src="/style/js/jquery.pjax.min.js"></script> 
+<script type="text/javascript" src="/style/js/responsiveslides.min.js"></script> 
+<script type="text/javascript" src="/style/js/jquery.lazyload.js"></script> 
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$(".post .thumb img,.entry img").lazyload({
+
+  	  	placeholder : "/style/images/grey.gif", 
+
+  	 	effect      : "fadeIn"
+
+	});
+
+});
+
+</script>
+</body>
+</html>
