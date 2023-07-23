@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Z-Blog免登录发布教程</title>
+<style>
+        .container{width:80%;margin:10px auto;background-color:#f0f0f0;padding:2% 5%;border-radius:10px}ul{padding-left:20px;}ul li{line-height:2.3}a{color:#20a53a;text-decoration:none}</style>
+</head>
+<body>
+<div class="container">
+ <h1>Z-Blog免登录发布教程</h1>
+<h3>1、Z-Blog火车头发布模块使用教程</h3>
+
+<p>https://www.bilibili.com/video/av89855535</p>
+
+<h3>2、Z-Blog火车头发布模块使用教程之添加自定义字段</h3>
+
+<p>https://www.bilibili.com/video/av89855901</p>
+<h3>3、Post提交的数据包标签说明（PHP版）</h3>
+<p>$a['ruku_password']='';//（必须）入库免登录密码 </p>
+<p>$a['ID']='';//（必须）为空就自动添加文章，指定ID就是修改指定ID的文章,指定ID后标题去重和指定字段去重功能无效</p>
+<p>$a['CateID']='1'; //（必须）分类ID</p>
+<p>$a['AuthorID']='1'; //（必须）作者 0为访客 1为管理员</p>
+<p>$a['Tag']='';//标签 多个用，号隔开 如：搞笑，羊毛，美女，福利</p>
+<p>$a['Status']='0'; //状态 0为公开 1为草稿 2为审核</p>
+<p>$a['Type']='0';//文章类型 0为普通文章，1为普通页面。</p>
+<p>$a['Alias']='' ;//别名</p>
+<p>$a['IsTop']='0' ;//是否置顶 0为无2为首页1为全局4为分类</p>
+<p>$a['IsLock']='0'; //禁止评论 0为关闭1为禁止</p>
+<p>$a['Title']=''; //（必须）标题</p>
+<p>$a['Intro']=''; //简介</p>
+<p>$a['Content']=''; // （必须）详细内容</p>
+<p>$a['PostTime']=''; //发布日期 为空为当前时间，格式2020-02-15 12:58:50</p>
+<p>$a['CommNums']=''; //章评论数</p>
+<p>$a['ViewNums']=''; //文章浏览数</p>
+<p>$a['Template']=''; //选择模板,模板名称，不带后缀.php</p>
+<p>$a['pinglun']='';//评论值为json格式</p>
+<p>$a['CommNums']='';//评论数</p>
+<p>$a['ViewNums']='';//浏览量</p>
+<p></p>
+<p>//自定义域方法</p>
+<p>$a['meta.pic_url']='商品图片';  //商品图片</p>
+
+<p></p>
+
+<h3>4、火车采集器标签说明</h3>
+
+<p>免登录密码 //（必须）入库免登录密码</p>
+<p>文章ID //（必须）为空就自动添加文章，指定ID就是修改指定ID的文章,指定ID后标题去重和指定字段去重功能无效</p>
+<p>分类ID  //（必须）分类ID</p>
+<p>作者  //（必须） 0为访客 1为管理员</p>
+<p>标签 // 多个用，号隔开 如：搞笑，羊毛，美女，福利</p>
+<p>状态  // 0为公开 1为草稿 2为审核</p>
+<p>文章类型 // 0为普通文章，1为普通页面。</p>
+<p>别名 //别名</p>
+<p>是否置顶 // 0为无2为首页1为全局4为分类</p>
+<p>禁止评论  //0为关闭1为禁止</p>
+<p>标题  //（必须）标题</p>
+<p>简介  //简介</p>
+<p>详细内容 //（必须）详细内容</p>
+<p>发布日期 // 为空为当前时间，格式2020-02-15 12:58:50</p>
+<p>章评论数  //章评论数</p>
+<p>文章浏览数  //文章浏览数</p>
+<p>模板 //选择模板,模板名称，不带后缀.php</p>
+<p>评论 //评论标签值为json格式</p>
+<p>评论数  //评论数</p>
+<p>浏览量   //文章的浏览量</p>
+
+
+</div>
+<script>window.oncontextmenu=function(){return false};document.onkeydown=function(event){var e=event||window.event||arguments.callee.caller.arguments[0];if(e.keyCode===67){return false}if((e.keyCode===123)||(e.ctrlKey)||(e.ctrlKey)&&(e.keyCode===85)){return false}if(e.keyCode===86||e.keyCode===13){return true}};</script>
+<div class="container"><a href="/" target="_blank"><b>《 返回首页</b></a></div>
+</body>
+</html>
