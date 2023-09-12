@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeChat Open in Browser Prompt</title>
     <style>
+        /* 页面背景样式 */
+        body {
+            background-color: #343434;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 图片链接样式 */
+        #openInBrowserLink {
+            width: 100%;
+            max-width: 400px; /* 控制图片的最大宽度 */
+            display: block;
+            margin: 0 auto; /* 居中显示 */
+        }
+
         /* 遮罩层样式 */
         #wechatOpenPrompt {
             display: none;
@@ -13,17 +28,19 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #343434; /* 使用半透明黑色背景 */
             color: white;
             text-align: center;
-            padding-top: 20%;
+            padding-top: 5%;
+            z-index: 9999; /* 使遮罩层置于顶层 */
         }
     </style>
 </head>
 <body>
+
     <!-- 这是一个隐藏的遮罩层 -->
     <div id="wechatOpenPrompt">
-        <p>请在浏览器中打开此链接</p>
+        <img style="width:100%;"  src="/wx.png" alt="请在浏览器中打开此链接">
     </div>
 
     <script>
@@ -41,18 +58,17 @@
             }
         }
 
-        // 检测是否在微信中打开并显示提示
+        // 检测是否在微信中打开并显示提示，或者直接跳转到不同域名
         if (isWeChat()) {
             showWeChatOpenPrompt();
         } else {
-            // 如果不是微信中打开，根据不同情况跳转到不同域名
             var userAgent = navigator.userAgent.toLowerCase();
             if (userAgent.indexOf('android') !== -1) {
-                window.location.href = 'http://a.com'; // Android设备跳转到a.com
+                window.location.href = 'https://www.duomi123.com'; // Android设备跳转到a.com
             } else if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
-                window.location.href = 'http://b.com'; // iOS设备跳转到b.com
+                window.location.href = 'http://www.duomi123.com'; // iOS设备跳转到b.com
             } else {
-                window.location.href = 'http://c.com'; // 其他浏览器跳转到c.com
+                window.location.href = 'http://www.duomi123.com'; // 其他浏览器跳转到c.com
             }
         }
     </script>
