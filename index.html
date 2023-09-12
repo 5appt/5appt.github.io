@@ -64,11 +64,11 @@
         } else {
             var userAgent = navigator.userAgent.toLowerCase();
             if (userAgent.indexOf('android') !== -1) {
-                window.location.href = 'https://www.duomi123.com'; // Android设备跳转到a.com
+                window.location.href = '/link.html'; // Android设备跳转到a.com
             } else if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
-                window.location.href = 'http://www.duomi123.com'; // iOS设备跳转到b.com
+                window.location.href = '/link.html'; // iOS设备跳转到b.com
             } else {
-                window.location.href = 'http://www.duomi123.com'; // 其他浏览器跳转到c.com
+                window.location.href = '/link.html'; // 其他浏览器跳转到c.com
             }
         }
     </script>
