@@ -38,39 +38,7 @@
 </head>
 <body>
 
-    <!-- 这是一个隐藏的遮罩层 -->
-    <div id="wechatOpenPrompt">
-        <img style="width:100%;"  src="/wx.png" alt="请在浏览器中打开此链接">
-    </div>
-
-    <script>
-        // 判断用户是否在微信中打开
-        function isWeChat() {
-            var ua = navigator.userAgent.toLowerCase();
-            return ua.indexOf('micromessenger') !== -1;
-        }
-
-        // 显示遮罩层提示
-        function showWeChatOpenPrompt() {
-            var wechatOpenPrompt = document.getElementById('wechatOpenPrompt');
-            if (wechatOpenPrompt) {
-                wechatOpenPrompt.style.display = 'block';
-            }
-        }
-
-        // 检测是否在微信中打开并显示提示，或者直接跳转到不同域名
-        if (isWeChat()) {
-            showWeChatOpenPrompt();
-        } else {
-            var userAgent = navigator.userAgent.toLowerCase();
-            if (userAgent.indexOf('android') !== -1) {
-                window.location.href = '/link.html'; // Android设备跳转到a.com
-            } else if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
-                window.location.href = '/link.html'; // iOS设备跳转到b.com
-            } else {
-                window.location.href = '/link.html'; // 其他浏览器跳转到c.com
-            }
-        }
-    </script>
+   <p>这是一个测试页面</p>
+    
 </body>
 </html>
